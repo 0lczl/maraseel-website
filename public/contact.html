@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Maraseel for shipping quotes, support, or inquiries. Get in touch with our team today.">
+    <title>Contact Us - Maraseel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/Maraseel-Logo-only-1 600px.png" alt="Maraseel Logo">
+                <span>Maraseel</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="tracking.html" class="nav-link">Tracking</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Contact Us</h1>
+                <p>Get in touch with our team for quotes, support, or inquiries</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2" style="gap: var(--spacing-2xl); align-items: start;">
+                <!-- Contact Info -->
+                <div>
+                    <h2>Get in Touch</h2>
+                    <p style="margin-bottom: var(--spacing-xl); color: var(--medium-gray);">
+                        We're here to help! Reach out to us through any of the following channels.
+                    </p>
+                    
+                    <div class="card" style="margin-bottom: var(--spacing-md);">
+                        <h3 style="margin-bottom: var(--spacing-sm);">📧 Email</h3>
+                        <p><a href="mailto:info@maraseel.com" style="color: var(--primary-color);">info@maraseel.com</a></p>
+                        <p style="color: var(--medium-gray); font-size: var(--font-size-sm); margin-top: var(--spacing-xs);">General inquiries</p>
+                    </div>
+                    
+                    <div class="card" style="margin-bottom: var(--spacing-md);">
+                        <h3 style="margin-bottom: var(--spacing-sm);">📞 Phone</h3>
+                        <p><a href="tel:+15551234567" style="color: var(--primary-color);">+1 (555) 123-4567</a></p>
+                        <p style="color: var(--medium-gray); font-size: var(--font-size-sm); margin-top: var(--spacing-xs);">24/7 Customer Support</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 style="margin-bottom: var(--spacing-sm);">📍 Address</h3>
+                        <p>123 Shipping Street<br>Logistics City, LC 12345<br>United States</p>
+                        <p style="color: var(--medium-gray); font-size: var(--font-size-sm); margin-top: var(--spacing-xs);">Visit us Monday - Friday, 9 AM - 6 PM</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div>
+                    <h2>Request a Quote</h2>
+                    <p style="margin-bottom: var(--spacing-lg); color: var(--medium-gray);">
+                        Fill out the form below and we'll get back to you with a customized shipping quote.
+                    </p>
+                    
+                    <div class="card">
+                        <form id="contactForm">
+                            <div class="form-success" id="formSuccess">
+                                Thank you! Your message has been sent successfully. We'll get back to you soon.
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    class="form-input" 
+                                    placeholder="Enter your full name"
+                                    required
+                                    aria-required="true"
+                                >
+                                <div class="form-error" id="nameError">Please enter your name</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    class="form-input" 
+                                    placeholder="your.email@example.com"
+                                    required
+                                    aria-required="true"
+                                >
+                                <div class="form-error" id="emailError">Please enter a valid email address</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    class="form-input" 
+                                    placeholder="+1 (555) 123-4567"
+                                    required
+                                    aria-required="true"
+                                >
+                                <div class="form-error" id="phoneError">Please enter a valid phone number</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="shipmentType" class="form-label">Shipment Type *</label>
+                                <select 
+                                    id="shipmentType" 
+                                    name="shipmentType" 
+                                    class="form-select"
+                                    required
+                                    aria-required="true"
+                                >
+                                    <option value="">Select shipment type</option>
+                                    <option value="express">Express Parcel</option>
+                                    <option value="standard">Standard Shipping</option>
+                                    <option value="freight">Freight Services</option>
+                                    <option value="ecommerce">E-commerce</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="form-error" id="shipmentTypeError">Please select a shipment type</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="origin" class="form-label">Origin *</label>
+                                <input 
+                                    type="text" 
+                                    id="origin" 
+                                    name="origin" 
+                                    class="form-input" 
+                                    placeholder="City, Country"
+                                    required
+                                    aria-required="true"
+                                >
+                                <div class="form-error" id="originError">Please enter origin location</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="destination" class="form-label">Destination *</label>
+                                <input 
+                                    type="text" 
+                                    id="destination" 
+                                    name="destination" 
+                                    class="form-input" 
+                                    placeholder="City, Country"
+                                    required
+                                    aria-required="true"
+                                >
+                                <div class="form-error" id="destinationError">Please enter destination location</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="weight" class="form-label">Weight (kg) *</label>
+                                <input 
+                                    type="number" 
+                                    id="weight" 
+                                    name="weight" 
+                                    class="form-input" 
+                                    placeholder="0.0"
+                                    min="0.1"
+                                    step="0.1"
+                                    required
+                                    aria-required="true"
+                                >
+                                <div class="form-error" id="weightError">Please enter a valid weight</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    class="form-textarea" 
+                                    placeholder="Tell us about your shipping needs..."
+                                    rows="4"
+                                ></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Submit Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Maraseel</h3>
+                    <p>Smart Global Shipping, On The Time</p>
+                    <p>Your trusted partner for reliable shipping solutions worldwide.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                        <a href="#" class="social-icon" aria-label="Twitter">t</a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+                        <a href="#" class="social-icon" aria-label="Instagram">ig</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="tracking.html">Track Shipment</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="services.html">Express Parcel</a>
+                    <a href="services.html">Freight Services</a>
+                    <a href="services.html">E-commerce Solutions</a>
+                    <a href="services.html">Last-Mile Delivery</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📧 info@maraseel.com</p>
+                    <p>📞 +1 (555) 123-4567</p>
+                    <p>📍 123 Shipping Street, Logistics City, LC 12345</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Maraseel. All rights reserved. | On The Time</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track your Maraseel shipment in real-time. Enter your tracking number to get instant updates on your package.">
+    <title>Track Shipment - Maraseel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/Maraseel-Logo-only-1 600px.png" alt="Maraseel Logo">
+                <span>Maraseel</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="tracking.html" class="nav-link active">Tracking</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Track Your Shipment</h1>
+                <p>Enter your tracking number to get real-time updates on your package</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracking Form -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div class="card" style="padding: var(--spacing-xl);">
+                    <form id="trackingForm">
+                        <div class="form-group">
+                            <label for="trackingNumber" class="form-label">Tracking Number</label>
+                            <input 
+                                type="text" 
+                                id="trackingNumber" 
+                                name="trackingNumber" 
+                                class="form-input" 
+                                placeholder="Enter your tracking number (e.g., MRS123456789)"
+                                required
+                                aria-required="true"
+                            >
+                            <div class="form-error" id="trackingError">Please enter a valid tracking number</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Track Shipment</button>
+                    </form>
+                </div>
+
+                <!-- Tracking Results -->
+                <div class="tracking-results" id="trackingResults">
+                    <div class="card" style="margin-top: var(--spacing-xl);">
+                        <div class="tracking-status">
+                            <h3>Shipment Status</h3>
+                            <p style="font-size: var(--font-size-lg); margin: var(--spacing-md) 0;">
+                                <strong>Tracking Number:</strong> <span id="resultTrackingNumber"></span>
+                            </p>
+                            <p style="font-size: var(--font-size-lg); margin: var(--spacing-md) 0;">
+                                <strong>Status:</strong> <span id="resultStatus" style="color: var(--primary-color); font-weight: 600;"></span>
+                            </p>
+                            <p style="margin: var(--spacing-md) 0;">
+                                <strong>Origin:</strong> <span id="resultOrigin"></span>
+                            </p>
+                            <p style="margin: var(--spacing-md) 0;">
+                                <strong>Destination:</strong> <span id="resultDestination"></span>
+                            </p>
+                            <p style="margin: var(--spacing-md) 0;">
+                                <strong>Estimated Delivery:</strong> <span id="resultDelivery"></span>
+                            </p>
+                        </div>
+
+                        <div class="status-timeline">
+                            <h4 style="margin-bottom: var(--spacing-md);">Tracking History</h4>
+                            <div id="timelineContainer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="grid grid-2" style="max-width: 800px; margin: 0 auto;">
+                <div class="card">
+                    <h3 class="card-title">Can't find your tracking number?</h3>
+                    <p class="card-text">Check your confirmation email or contact our customer service team for assistance.</p>
+                    <a href="contact.html" class="btn btn-secondary" style="margin-top: var(--spacing-md);">Contact Us</a>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Need help?</h3>
+                    <p class="card-text">Our support team is available 24/7 to assist you with tracking and delivery inquiries.</p>
+                    <a href="contact.html" class="btn btn-secondary" style="margin-top: var(--spacing-md);">Get Support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Maraseel</h3>
+                    <p>Smart Global Shipping, On The Time</p>
+                    <p>Your trusted partner for reliable shipping solutions worldwide.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                        <a href="#" class="social-icon" aria-label="Twitter">t</a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+                        <a href="#" class="social-icon" aria-label="Instagram">ig</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="tracking.html">Track Shipment</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="services.html">Express Parcel</a>
+                    <a href="services.html">Freight Services</a>
+                    <a href="services.html">E-commerce Solutions</a>
+                    <a href="services.html">Last-Mile Delivery</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📧 info@maraseel.com</p>
+                    <p>📞 +1 (555) 123-4567</p>
+                    <p>📍 123 Shipping Street, Logistics City, LC 12345</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Maraseel. All rights reserved. | On The Time</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
