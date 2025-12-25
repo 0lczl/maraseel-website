@@ -22,10 +22,11 @@ app.use('/api/tracking', trackingRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/quotes', quotesRoutes);
 
-// Serve frontend for all other URLs
-app.get('*', (req, res) => {
+// Serve frontend for all other URLs (Express 5 compatible)
+app.get('/{*splat}', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
-});
+  });
+  
 
 // Start the server
 app.listen(PORT, () => {
