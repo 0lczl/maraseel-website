@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حسابي - مراسيل</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8F65 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .account-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            color: #FF6B35;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .logo p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .profile-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8F65 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        .profile-info h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        #accountInfo {
+            margin-bottom: 30px;
+        }
+
+        #accountInfo p {
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-right: 4px solid #FF6B35;
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        #adminLink {
+            margin-bottom: 20px;
+        }
+
+        #adminLink a {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #2196F3;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        #adminLink a:hover {
+            background: #1976D2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(33, 150, 243, 0.3);
+        }
+
+        .actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #FF6B35;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #FF8F65;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #e0e0e0;
+        }
+
+        .btn-logout {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-logout:hover {
+            background: #c82333;
+        }
+
+        .quick-links {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .quick-links h3 {
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .link-card {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .link-card:hover {
+            background: #FF6B35;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .link-card .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .header-section {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="account-container">
+        <!-- Header -->
+        <div class="header-section">
+            <div class="logo">
+                <h1>🚢 مراسيل</h1>
+                <p>حلول شحن موثوقة وسريعة</p>
+            </div>
+            <a href="/index.html" class="btn btn-secondary">← الصفحة الرئيسية</a>
+        </div>
+
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar" id="avatar">M</div>
+                <div class="profile-info">
+                    <h2>حسابي</h2>
+                </div>
+            </div>
+
+            <div id="accountInfo"></div>
+            
+            <div id="adminLink"></div>
+
+            <div class="actions">
+                <a href="/tracking.html" class="btn btn-primary">🔍 تتبع الشحنة</a>
+                <a href="/contact.html" class="btn btn-primary">💰 طلب عرض سعر</a>
+                <button id="logoutBtn" class="btn btn-logout">🚪 تسجيل الخروج</button>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <h3>روابط سريعة</h3>
+            <div class="links-grid">
+                <a href="/index.html" class="link-card">
+                    <div class="icon">🏠</div>
+                    <div>الرئيسية</div>
+                </a>
+                <a href="/services.html" class="link-card">
+                    <div class="icon">📦</div>
+                    <div>خدماتنا</div>
+                </a>
+                <a href="/contact.html" class="link-card">
+                    <div class="icon">📞</div>
+                    <div>تواصل معنا</div>
+                </a>
+                <a href="/about.html" class="link-card">
+                    <div class="icon">ℹ️</div>
+                    <div>من نحن</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // YOUR EXACT ORIGINAL WORKING CODE
+        async function checkAuth() {
+            const response = await fetch('/api/auth/me');
+            const data = await response.json();
+            
+            if (!data.authenticated) {
+                window.location.href = '/login.html';
+            } else {
+                document.getElementById('accountInfo').innerHTML = `
+                    <p>📧 البريد الإلكتروني: ${data.user.email}</p>
+                    <p> نوع الحساب: ${data.user.role === 'admin' ? 'مسؤول' : 'مستخدم'}</p>
+                `;
+                
+                // Set avatar initial
+                const initial = data.user.email.charAt(0).toUpperCase();
+                document.getElementById('avatar').textContent = initial;
+                
+                // Show admin link if user is admin
+                if (data.user.role === 'admin') {
+                    document.getElementById('adminLink').innerHTML = `
+                        <a href="/admin.html">⚙️ الذهاب إلى لوحة التحكم</a>
+                    `;
+                }
+            }
+        }
+        
+        document.getElementById('logoutBtn').addEventListener('click', async () => {
+            await fetch('/api/auth/logout', { method: 'POST' });
+            window.location.href = '/login.html';
+        });
+        
+        checkAuth();
+    </script>
+</body>
+</html>

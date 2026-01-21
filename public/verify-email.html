@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تأكيد البريد الإلكتروني - مراسيل</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8F65 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .auth-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .logo-section {
+            margin-bottom: 30px;
+        }
+
+        .logo-section h1 {
+            color: #FF6B35;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .logo-section p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .verification-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        #message {
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            margin: 20px 0;
+            background: #f8f9fa;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        #message.success {
+            background: #e8f5e9;
+            color: #2e7d32;
+            border: 2px solid #4caf50;
+        }
+
+        #message.error {
+            background: #ffe6e6;
+            color: #d32f2f;
+            border: 2px solid #f44336;
+        }
+
+        #message.loading {
+            background: #fff3f0;
+            color: #FF6B35;
+            border: 2px solid #FF8F65;
+        }
+
+        #loginLink {
+            display: none;
+            margin-top: 25px;
+            padding: 15px 30px;
+            background: #FF6B35;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        #loginLink.show {
+            display: inline-block;
+        }
+
+        #loginLink:hover {
+            background: #FF8F65;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #FF6B35;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+            display: none;
+        }
+
+        .spinner.show {
+            display: block;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 480px) {
+            .auth-container {
+                padding: 30px 20px;
+            }
+
+            .logo-section h1 {
+                font-size: 2rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            #message {
+                font-size: 1rem;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="logo-section">
+            <h1>🚢 مراسيل</h1>
+            <p>حلول شحن موثوقة وسريعة</p>
+        </div>
+
+        <h1>تأكيد البريد الإلكتروني</h1>
+        
+        <div class="verification-icon" id="verificationIcon">📧</div>
+        
+        <div class="spinner" id="spinner"></div>
+        
+        <div id="message" class="loading">جاري تأكيد بريدك الإلكتروني...</div>
+        
+        <a href="/login.html" id="loginLink">← الانتقال إلى تسجيل الدخول</a>
+    </div>
+
+    <script>
+        async function verifyEmail() {
+            const messageDiv = document.getElementById('message');
+            const loginLink = document.getElementById('loginLink');
+            const spinner = document.getElementById('spinner');
+            const icon = document.getElementById('verificationIcon');
+            
+            const params = new URLSearchParams(window.location.search);
+            const token = params.get('token');
+            
+            spinner.classList.add('show');
+            
+            if (!token) {
+                messageDiv.className = 'error';
+                messageDiv.textContent = '❌ لا يوجد رمز تأكيد متوفر. يرجى التحقق من الرابط في بريدك الإلكتروني.';
+                spinner.classList.remove('show');
+                icon.textContent = '❌';
+                return;
+            }
+            
+            try {
+                const response = await fetch(`/api/auth/verify-email?token=${token}`);
+                const data = await response.json();
+                
+                spinner.classList.remove('show');
+                
+                if (response.ok) {
+                    messageDiv.className = 'success';
+                    messageDiv.textContent = '✅ ' + (data.message || 'تم تأكيد بريدك الإلكتروني بنجاح! يمكنك الآن تسجيل الدخول.');
+                    loginLink.classList.add('show');
+                    icon.textContent = '✅';
+                } else {
+                    messageDiv.className = 'error';
+                    messageDiv.textContent = '❌ ' + (data.message || 'فشل التأكيد. قد يكون الرابط منتهي الصلاحية.');
+                    icon.textContent = '❌';
+                }
+            } catch (error) {
+                spinner.classList.remove('show');
+                messageDiv.className = 'error';
+                messageDiv.textContent = '❌ فشل إجراء عملية التأكيد. يرجى المحاولة مرة أخرى أو التواصل مع الدعم.';
+                icon.textContent = '❌';
+                console.error('Verification error:', error);
+            }
+        }
+        
+        verifyEmail();
+    </script>
+</body>
+</html>

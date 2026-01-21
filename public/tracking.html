@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Track your Maraseel shipment in real-time. Enter your tracking number to get instant updates on your package.">
-    <title>Track Shipment - Maraseel</title>
+    <meta name="description" content="تتبع شحنة مراسيل الخاصة بك في الوقت الفعلي. أدخل رقم التتبع للحصول على تحديثات فورية عن طردك.">
+    <title>تتبع الشحنة - مراسيل</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -12,15 +12,15 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="assets/Maraseel-Logo-only-1 600px.png" alt="Maraseel Logo">
-                <span>Maraseel</span>
+                <img src="assets/Maraseel-Logo-only-1 600px.png" alt="شعار مراسيل">
+                <span>مراسيل</span>
             </a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="tracking.html" class="nav-link active">Tracking</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                <li><a href="services.html" class="nav-link">خدماتنا</a></li>
+                <li><a href="tracking.html" class="nav-link active">تتبع الشحنة</a></li>
+                <li><a href="about.html" class="nav-link">من نحن</a></li>
+                <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -30,15 +30,17 @@
         </div>
     </nav>
 
+
     <!-- Hero Banner -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Track Your Shipment</h1>
-                <p>Enter your tracking number to get real-time updates on your package</p>
+                <h1>تتبع شحنتك</h1>
+                <p>أدخل رقم التتبع للحصول على تحديثات فورية عن طردك</p>
             </div>
         </div>
     </section>
+
 
     <!-- Tracking Form -->
     <section class="section">
@@ -47,46 +49,48 @@
                 <div class="card" style="padding: var(--spacing-xl);">
                     <form id="trackingForm">
                         <div class="form-group">
-                            <label for="trackingNumber" class="form-label">Tracking Number</label>
+                            <label for="trackingNumber" class="form-label">رقم التتبع</label>
                             <input 
                                 type="text" 
                                 id="trackingNumber" 
                                 name="trackingNumber" 
                                 class="form-input" 
-                                placeholder="Enter your tracking number (e.g., MRS123456789)"
+                                placeholder="أدخل رقم التتبع (مثال: MRS123456789)"
                                 required
                                 aria-required="true"
                             >
-                            <div class="form-error" id="trackingError">Please enter a valid tracking number</div>
+                            <div class="form-error" id="trackingError">الرجاء إدخال رقم تتبع صالح</div>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">Track Shipment</button>
+                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">تتبع الشحنة</button>
                     </form>
                 </div>
+
 
                 <!-- Tracking Results -->
                 <div class="tracking-results" id="trackingResults">
                     <div class="card" style="margin-top: var(--spacing-xl);">
                         <div class="tracking-status">
-                            <h3>Shipment Status</h3>
+                            <h3>حالة الشحنة</h3>
                             <p style="font-size: var(--font-size-lg); margin: var(--spacing-md) 0;">
-                                <strong>Tracking Number:</strong> <span id="resultTrackingNumber"></span>
+                                <strong>رقم التتبع:</strong> <span id="resultTrackingNumber"></span>
                             </p>
                             <p style="font-size: var(--font-size-lg); margin: var(--spacing-md) 0;">
-                                <strong>Status:</strong> <span id="resultStatus" style="color: var(--primary-color); font-weight: 600;"></span>
+                                <strong>الحالة:</strong> <span id="resultStatus" style="color: var(--primary-color); font-weight: 600;"></span>
                             </p>
                             <p style="margin: var(--spacing-md) 0;">
-                                <strong>Origin:</strong> <span id="resultOrigin"></span>
+                                <strong>نقطة الانطلاق:</strong> <span id="resultOrigin"></span>
                             </p>
                             <p style="margin: var(--spacing-md) 0;">
-                                <strong>Destination:</strong> <span id="resultDestination"></span>
+                                <strong>الوجهة:</strong> <span id="resultDestination"></span>
                             </p>
                             <p style="margin: var(--spacing-md) 0;">
-                                <strong>Estimated Delivery:</strong> <span id="resultDelivery"></span>
+                                <strong>التسليم المتوقع:</strong> <span id="resultDelivery"></span>
                             </p>
                         </div>
 
+
                         <div class="status-timeline">
-                            <h4 style="margin-bottom: var(--spacing-md);">Tracking History</h4>
+                            <h4 style="margin-bottom: var(--spacing-md);">سجل التتبع</h4>
                             <div id="timelineContainer"></div>
                         </div>
                     </div>
@@ -95,72 +99,70 @@
         </div>
     </section>
 
+
     <!-- Help Section -->
     <section class="section bg-light">
         <div class="container">
             <div class="grid grid-2" style="max-width: 800px; margin: 0 auto;">
                 <div class="card">
-                    <h3 class="card-title">Can't find your tracking number?</h3>
-                    <p class="card-text">Check your confirmation email or contact our customer service team for assistance.</p>
-                    <a href="contact.html" class="btn btn-secondary" style="margin-top: var(--spacing-md);">Contact Us</a>
+                    <h3 class="card-title">لا تستطيع العثور على رقم التتبع؟</h3>
+                    <p class="card-text">تحقق من بريد التأكيد الإلكتروني أو تواصل مع فريق خدمة العملاء للحصول على المساعدة.</p>
+                    <a href="contact.html" class="btn btn-secondary" style="margin-top: var(--spacing-md);">تواصل معنا</a>
                 </div>
                 <div class="card">
-                    <h3 class="card-title">Need help?</h3>
-                    <p class="card-text">Our support team is available 24/7 to assist you with tracking and delivery inquiries.</p>
-                    <a href="contact.html" class="btn btn-secondary" style="margin-top: var(--spacing-md);">Get Support</a>
+                    <h3 class="card-title">هل تحتاج إلى مساعدة؟</h3>
+                    <p class="card-text">فريق الدعم لدينا متاح على مدار الساعة طوال أيام الأسبوع لمساعدتك في استفسارات التتبع والتسليم.</p>
+                    <a href="contact.html" class="btn btn-secondary" style="margin-top: var(--spacing-md);">احصل على الدعم</a>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Maraseel</h3>
-                    <p>Smart Global Shipping, On The Time</p>
-                    <p>Your trusted partner for reliable shipping solutions worldwide.</p>
+                    <h3>مراسيل</h3>
+                    <p>شحن عالمي ذكي، في الوقت المحدد</p>
+                    <p>شريكك الموثوق لحلول شحن موثوقة في جميع أنحاء العالم.</p>
                     <div class="footer-social">
-                        <a href="#" class="social-icon" aria-label="Facebook">f</a>
-                        <a href="#" class="social-icon" aria-label="Twitter">t</a>
-                        <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
-                        <a href="#" class="social-icon" aria-label="Instagram">ig</a>
+                        <a href="#" class="social-icon" aria-label="فيسبوك">f</a>
+                        <a href="#" class="social-icon" aria-label="تويتر">t</a>
+                        <a href="#" class="social-icon" aria-label="لينكد إن">in</a>
+                        <a href="#" class="social-icon" aria-label="إنستغرام">ig</a>
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="tracking.html">Track Shipment</a>
-                    <a href="about.html">About Us</a>
-                    <a href="contact.html">Contact</a>
+                    <h3>روابط سريعة</h3>
+                    <a href="index.html">الرئيسية</a>
+                    <a href="services.html">خدماتنا</a>
+                    <a href="tracking.html">تتبع الشحنة</a>
+                    <a href="about.html">من نحن</a>
+                    <a href="contact.html">تواصل معنا</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Services</h3>
-                    <a href="services.html">Express Parcel</a>
-                    <a href="services.html">Freight Services</a>
-                    <a href="services.html">E-commerce Solutions</a>
-                    <a href="services.html">Last-Mile Delivery</a>
+                    <h3>خدماتنا</h3>
+                    <a href="services.html">الطرود السريعة</a>
+                    <a href="services.html">خدمات الشحن</a>
+                    <a href="services.html">حلول التجارة الإلكترونية</a>
+                    <a href="services.html">التوصيل للميل الأخير</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Contact Info</h3>
+                    <h3>معلومات التواصل</h3>
                     <p>📧 info.maraseel@gamil.com</p>
                     <p>📞 +966 544115555</p>
                     <p>📍 الجبيل, المملكة العربية السعودية</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Maraseel. All rights reserved. | On The Time</p>
+                <p>&copy; 2024 مراسيل. جميع الحقوق محفوظة. | في الوقت المحدد</p>
             </div>
         </div>
     </footer>
 
+
     <script src="js/main.js"></script>
 </body>
 </html>
-
-
-
-
-

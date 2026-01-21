@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/Maraseel_rounded.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Maraseel - Smart Global Shipping, On The Time. Express parcel delivery, freight services, and logistics solutions.">
-    <title>Maraseel - Smart Global Shipping, On The Time</title>
+    <meta name="description" content="مراسيل - شحن عالمي ذكي، في الوقت المحدد. توصيل الطرود السريع، خدمات الشحن، والحلول اللوجستية.">
+    <title>مراسيل - في الوقت المحدد!</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
+
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="assets/Maraseel-Logo-only-1 600px.png" alt="Maraseel Logo">
-                <span>Maraseel</span>
+                <img src="assets/Maraseel-Logo-only-1 600px.png" alt="شعار مراسيل">
+                <!--<span>مراسيل</span>-->
             </a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="tracking.html" class="nav-link">Tracking</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="index.html" class="nav-link active">الرئيسية</a></li>
+                <li><a href="services.html" class="nav-link">خدماتنا</a></li>
+                <li><a href="tracking.html" class="nav-link">تتبع الشحنة</a></li>
+                <li><a href="about.html" class="nav-link">من نحن</a></li>
+                <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
             </ul>
+            
+            <!-- NEW: Auth buttons section -->
+            <div class="nav-auth" id="authButtons">
+                <!-- Login/Signup buttons will be injected here by JavaScript -->
+            </div>
+            
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -30,204 +40,213 @@
         </div>
     </nav>
 
+
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Smart Global Shipping, On The Time</h1>
-                <p>Your trusted partner for reliable, fast, and efficient shipping solutions worldwide</p>
+                <h1>مراسيل - في الوقت المحدد</h1>
+                <p>شريكك الموثوق لحلول شحن موثوقة وسريعة في جميع أنحاء العالم</p>
                 <div class="hero-buttons">
-                    <a href="tracking.html" class="btn btn-primary btn-large">Track Shipment</a>
-                    <a href="contact.html" class="btn btn-secondary btn-large">Get Quote</a>
+                    <a href="tracking.html" class="btn btn-primary btn-large">تتبع شحنتك</a>
+                    <a href="contact.html" class="btn btn-secondary btn-large">إرسال شحنة</a>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Services Overview -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Comprehensive shipping solutions tailored to your needs</p>
+            <h2 class="section-title">خدماتنا</h2>
+            <p class="section-subtitle">حلول شحن مخصصة لتلبية جميع احتياجاتك</p>
             <div class="services-grid">
                 <div class="card service-card">
                     <div class="card-icon">📦</div>
-                    <h3 class="card-title">Express Parcel</h3>
-                    <p class="card-text">Fast and secure parcel delivery for urgent shipments. Same-day and next-day options available.</p>
+                    <h3 class="card-title">شحن سريع</h3>
+                    <p class="card-text">شحن سريع وموثوق للشحنات الحرجة. خيارات شحن اليوم واليوم التالي متاحة</p>
                 </div>
                 <div class="card service-card">
                     <div class="card-icon">🚚</div>
-                    <h3 class="card-title">Freight Services</h3>
-                    <p class="card-text">Heavy freight and cargo transportation with specialized handling and tracking.</p>
+                    <h3 class="card-title">شحن البضائع</h3>
+                    <p class="card-text">شحن البضائع الثقيلة والحاويات مع معالجة مخصصة وتتبع</p>
                 </div>
                 <div class="card service-card">
                     <div class="card-icon">🛒</div>
-                    <h3 class="card-title">E-commerce</h3>
-                    <p class="card-text">Seamless integration for online retailers with automated fulfillment and returns.</p>
+                    <h3 class="card-title">التجارة الإلكترونية</h3>
+                    <p class="card-text">تكامل موثوق به للتجار الإلكترونيين مع تلبية الطلبات وإعادة المرتجعات</p>
                 </div>
                 <div class="card service-card">
                     <div class="card-icon">🏠</div>
-                    <h3 class="card-title">Last-Mile Delivery</h3>
-                    <p class="card-text">Reliable final delivery to your customers' doorsteps with real-time updates.</p>
+                    <h3 class="card-title">التسليم النهائي</h3>
+                    <p class="card-text">تسليم موثوق به لعملائك من الباب إلى الباب مع تحديثات الوقت الحقيقي</p>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Why Choose Us -->
     <section class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Why Choose Maraseel</h2>
-            <p class="section-subtitle">We deliver excellence in every shipment</p>
+            <h2 class="section-title">لماذا تختار مراسيل؟</h2>
+            <p class="section-subtitle">خدمة مثالية لكل شحنة</p>
             <div class="features-grid">
                 <div class="feature-item">
                     <div class="feature-icon">⚡</div>
-                    <h3>Fast Delivery</h3>
-                    <p>Express shipping options to get your packages delivered on time, every time.</p>
+                    <h3>توصيل سريع</h3>
+                    <p>خيارات شحن سريعة للحصول على الشحنات في الوقت المحدد، في كل مرة</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">🌍</div>
-                    <h3>Global Coverage</h3>
-                    <p>Worldwide shipping network covering over 200 countries and territories.</p>
+                    <h3>شبكة شحن عالمية</h3>
+                    <p>شبكة شحن تغطي أكثر من 200 دولة ومناطق حول العالم</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">🔒</div>
-                    <h3>Secure & Insured</h3>
-                    <p>Full insurance coverage and secure handling for all your valuable shipments.</p>
+                    <h3>تغطية تأمينية</h3>
+                    <p>تأمين كامل لجميع الشحنات القيمة والمعالجة الموثوق بها لجميع شحناتك</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">📱</div>
-                    <h3>Real-Time Tracking</h3>
-                    <p>Track your shipments in real-time with our advanced tracking system.</p>
+                    <h3>تتبع الوقت الحقيقي</h3>
+                    <p>تتبع شحناتك في الوقت الحقيقي مع نظام التتبع المتقدم</p>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- How It Works -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">How It Works</h2>
-            <p class="section-subtitle">Simple steps to ship with confidence</p>
+            <h2 class="section-title">كيف يعمل؟</h2>
+            <p class="section-subtitle">خطوات بسيطة لشحن موثوق</p>
             <div class="steps">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Get a Quote</h3>
-                    <p>Fill out our quick quote form with your shipment details and get an instant price estimate.</p>
+                    <h3>احصل على عرض سعر</h3>
+                    <p>املأ جميع المعلومات اللازمة لشحنتك واحصل على سعر فوري</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Book & Prepare</h3>
-                    <p>Book your shipment and prepare your package according to our packaging guidelines.</p>
+                    <h3>احجز وجهز</h3>
+                    <p>احجز شحنتك وجهزها وفقاً لمواصفات التعبئة الخاصة بنا</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>We Collect</h3>
-                    <p>Schedule a pickup or drop off at one of our convenient locations.</p>
+                    <h3>نستلم الشحنة</h3>
+                    <p>نستلم الشحنة منك ونجهزها ونرسلها إلى الوجهة المطلوبة</p>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
-                    <h3>Track & Deliver</h3>
-                    <p>Track your shipment in real-time and receive notifications until delivery.</p>
+                    <h3>تتبع وتسليم</h3>
+                    <p>تتبع شحنتك في الوقت الحقيقي واحصل على تحديثات حتى التسليم</p>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Coverage Section -->
+    <!--
     <section class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Global Coverage</h2>
-            <p class="section-subtitle">Shipping to major regions worldwide</p>
+            <h2 class="section-title">تغطية عالمية</h2>
+            <p class="section-subtitle">شحن إلى المناطق الرئيسية في جميع أنحاء العالم</p>
             <div class="coverage-list">
                 <div class="coverage-item">
-                    <h4>🌎 Americas</h4>
-                    <p>North & South America</p>
+                    <h4>🌎 الأمريكيتين</h4>
+                    <p>أمريكا الشمالية والجنوبية</p>
                 </div>
                 <div class="coverage-item">
-                    <h4>🌍 Europe</h4>
-                    <p>All EU Countries</p>
+                    <h4>🌍 أوروبا</h4>
+                    <p>جميع دول الاتحاد الأوروبي</p>
                 </div>
                 <div class="coverage-item">
-                    <h4>🌏 Asia Pacific</h4>
-                    <p>APAC Region</p>
+                    <h4>🌏 آسيا والمحيط الهادئ</h4>
+                    <p>منطقة آسيا والمحيط الهادئ</p>
                 </div>
                 <div class="coverage-item">
-                    <h4>🌍 Middle East</h4>
-                    <p>GCC & MENA</p>
+                    <h4>🌍 الشرق الأوسط</h4>
+                    <p>دول مجلس التعاون والشرق الأوسط</p>
                 </div>
                 <div class="coverage-item">
-                    <h4>🌍 Africa</h4>
-                    <p>Major African Markets</p>
+                    <h4>🌍 أفريقيا</h4>
+                    <p>الأسواق الأفريقية الرئيسية</p>
                 </div>
             </div>
         </div>
     </section>
-
+    -->
+    
     <!-- Testimonials -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">What Our Customers Say</h2>
-            <p class="section-subtitle">Trusted by businesses and individuals worldwide</p>
+            <h2 class="section-title">ماذا يقول عملاؤنا</h2>
+            <p class="section-subtitle">موثوق به من قبل الشركات والأفراد في جميع أنحاء العالم</p>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"Maraseel has transformed our e-commerce shipping. Fast, reliable, and always on time. Highly recommended!"</p>
-                    <p class="testimonial-author">— Sarah Johnson, E-commerce Manager</p>
+                    <p class="testimonial-text">"مراسيل حولت شحننا الإلكتروني. سريع، موثوق وفي الوقت المحدد. أوصي بها بشدة!"</p>
+                    <p class="testimonial-author">— حسن المدير العام، مدير التجارة الإلكترونية</p>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"Outstanding service! Their tracking system is excellent and customer support is always responsive. Best shipping partner we've worked with."</p>
-                    <p class="testimonial-author">— Michael Chen, Business Owner</p>
+                    <p class="testimonial-text">"خدمة مثالية! نظام التتبع الخاص بهم رائع ودعم العملاء متاح دائماً. أفضل شريك لشحناتنا."</p>
+                    <p class="testimonial-author">— أحمد بن عمر، مدير العمليات</p>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"Professional, efficient, and cost-effective. Maraseel handles all our international shipments with care and precision."</p>
-                    <p class="testimonial-author">— David Williams, Logistics Coordinator</p>
+                    <p class="testimonial-text">"مهنيون، فعالون، وبأسعار معقولة. مراسيل تتعامل مع جميع شحناتنا الدولية بعناية ودقة."</p>
+                    <p class="testimonial-author">— سارة الأحمدي، مديرة المشتريات</p>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- FAQ Section -->
     <section class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
+            <h2 class="section-title">الأسئلة الشائعة</h2>
             <div class="faq-list">
                 <div class="faq-item">
-                    <div class="faq-question">How long does shipping take?</div>
+                    <div class="faq-question">كم تستغرق الشحنة حتى تصل؟</div>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Shipping times vary based on the service selected and destination. Express services typically deliver within 1-3 business days, while standard services take 5-7 business days. International shipments may take 7-14 business days depending on customs clearance.
+                           تستغرق الشحنة عادة من 7 إلى 10 أيام عمل للوصول، حسب الوجهة ونوع الخدمة المختارة. الشحن السريع متاح للتسليم في 1-3 أيام عمل.
                         </div>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">What items are prohibited for shipping?</div>
+                    <div class="faq-question">ما هي البضائع المحظورة للشحن؟</div>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Prohibited items include hazardous materials, flammable substances, perishable foods without proper packaging, illegal items, and items restricted by destination country laws. Please check our terms and conditions for a complete list.
+                            البضائع المحظورة للشحن تشمل المواد الخطرة، المواد القابلة للاشتعال، المواد الغذائية منتهية الصلاحية، والبضائع المخالفة لقوانين الدولة المقصد. يرجى التحقق من شروط وأحكامنا للحصول على قائمة كاملة.
                         </div>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">How can I track my shipment?</div>
+                    <div class="faq-question">كيف يمكنني تتبع شحنتي؟</div>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            You can track your shipment using the tracking number provided in your confirmation email. Simply enter the tracking number on our tracking page for real-time updates on your shipment's status and location.
+                           يمكنك تتبع شحنتك باستخدام رقم التتبع المقدم في بريد التأكيد الخاص بك. فقط أدخل رقم التتبع على صفحة التتبع للحصول على تحديثات فورية عن حالة وموقع شحنتك.
                         </div>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">Do you offer insurance for shipments?</div>
+                    <div class="faq-question">هل تقدمون تأمين للشحنات؟</div>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Yes, all shipments include basic insurance coverage. Additional insurance can be purchased for high-value items. Contact our customer service team for more information about insurance options.
+                            نعم، جميع الشحنات تشمل تأميناً أساسياً. يمكن شراء تأمين إضافي للبضائع القيمة. يرجى الاتصال بفريق خدمة العملاء للحصول على مزيد من المعلومات حول خيارات التأمين.
                         </div>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">What payment methods do you accept?</div>
+                    <div class="faq-question">ما هي طرق الدفع التي تقبلونها؟</div>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            We accept major credit cards, debit cards, bank transfers, and corporate accounts. Payment is typically required at the time of booking, though account customers may have credit terms available.
+                            نقبل العديد من طرق الدفع مثل البطاقات الائتمانية، البطاقات المدينة، التحويلات البنكية، والحسابات المؤسسية. يتم الدفع عادةً عند الحجز، ومع ذلك، قد يكون للعملاء المؤسسيين شروط ائتمانية خاصة.
                         </div>
                     </div>
                 </div>
@@ -235,61 +254,107 @@
         </div>
     </section>
 
+
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to Ship?</h2>
-            <p>Get started today and experience the Maraseel difference</p>
-            <a href="contact.html" class="btn btn-secondary btn-large">Get a Free Quote</a>
+            <h2>هل أنت جاهز للشحن؟</h2>
+            <p>ابدأ اليوم واستمتع بتجربة مراسيل المميزة</p>
+            <a href="contact.html" class="btn btn-secondary btn-large">احصل على عرض سعر مجاني</a>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Maraseel</h3>
-                    <p>Smart Global Shipping, On The Time</p>
-                    <p>Your trusted partner for reliable shipping solutions worldwide.</p>
+                    <h3>مراسيل</h3>
+                    <p>في الوقت المحدد</p>
+                    <p>شريكك الموثوق لحلول شحن موثوقة وسريعة في جميع أنحاء العالم</p>
                     <div class="footer-social">
-                        <a href="#" class="social-icon" aria-label="Facebook">f</a>
-                        <a href="#" class="social-icon" aria-label="Twitter">t</a>
-                        <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
-                        <a href="#" class="social-icon" aria-label="Instagram">ig</a>
+                        <a href="#" class="social-icon" aria-label="فيسبوك">f</a>
+                        <a href="#" class="social-icon" aria-label="تويتر">t</a>
+                        <a href="#" class="social-icon" aria-label="لينكد إن">in</a>
+                        <a href="#" class="social-icon" aria-label="إنستغرام">ig</a>
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="tracking.html">Track Shipment</a>
-                    <a href="about.html">About Us</a>
-                    <a href="contact.html">Contact</a>
+                    <h3>الروابط السريعة</h3>
+                    <a href="index.html">الرئيسية</a>
+                    <a href="services.html">خدماتنا</a>
+                    <a href="tracking.html">تتبع الشحنة</a>
+                    <a href="about.html">من نحن</a>
+                    <a href="contact.html">تواصل معنا</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Services</h3>
-                    <a href="services.html">Express Parcel</a>
-                    <a href="services.html">Freight Services</a>
-                    <a href="services.html">E-commerce Solutions</a>
-                    <a href="services.html">Last-Mile Delivery</a>
+                    <h3>خدماتنا</h3>
+                    <a href="services.html">شحن سريع</a>
+                    <a href="services.html">شحن البضائع</a>
+                    <a href="services.html">التجارة الإلكترونية</a>
+                    <a href="services.html">التسليم النهائي</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Contact Info</h3>
+                    <h3>معلومات الاتصال</h3>
                     <p>📧 info.maraseel@gamil.com</p>
                     <p>📞 +966 544115555</p>
                     <p>📍 الجبيل, المملكة العربية السعودية</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Maraseel. All rights reserved. | On The Time</p>
+                <p>&copy; 2024 مراسيل. جميع الحقوق محفوظة. | في الوقت المحدد</p>
             </div>
         </div>
     </footer>
 
+
     <script src="js/main.js"></script>
+    <script>
+        // Check if user is logged in and update navbar
+        async function updateNavbar() {
+          try {
+            const response = await fetch('/api/auth/me');
+            const data = await response.json();
+            
+            const authButtons = document.getElementById('authButtons');
+            
+            if (data.authenticated) {
+              // User is logged in - show account button and logout
+              authButtons.innerHTML = `
+                <span class="user-email">${data.user.email}</span>
+                <a href="/account.html" class="btn-account">حسابي</a>
+                <button onclick="logout()" class="btn-logout">تسجيل خروج</button>
+              `;
+            } else {
+              // User not logged in - show login and signup
+              authButtons.innerHTML = `
+                <a href="/login.html" class="btn-login">تسجيل دخول</a>
+                <a href="/signup.html" class="btn-signup">إنشاء حساب</a>
+              `;
+            }
+          } catch (error) {
+            console.error('Failed to check auth status:', error);
+            // If API fails, show login/signup buttons
+            authButtons.innerHTML = `
+              <a href="/login.html" class="btn-login">تسجيل دخول</a>
+              <a href="/signup.html" class="btn-signup">إنشاء حساب</a>
+            `;
+          }
+        }
+        
+        async function logout() {
+          try {
+            await fetch('/api/auth/logout', { method: 'POST' });
+            window.location.href = '/';
+          } catch (error) {
+            console.error('Logout failed:', error);
+          }
+        }
+        
+        // Run on page load
+        updateNavbar();
+      </script>
+      
 </body>
 </html>
-
-
-
