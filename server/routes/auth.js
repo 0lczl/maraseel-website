@@ -4,7 +4,7 @@ const { hashPassword, verifyPassword } = require('../utils/password');
 const { generateToken, hashToken } = require('../utils/tokens');
 const db = require('../db/database');
 const { authLimiter, passwordResetLimiter } = require('../middleware/rateLimiter');
-const { sendPasswordResetEmail } = require('../services/emailService');
+//const { sendPasswordResetEmail } = require('../services/emailService');
 
 
 // POST /api/auth/signup - NO EMAIL VERIFICATION
